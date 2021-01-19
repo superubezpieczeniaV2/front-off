@@ -1,0 +1,25 @@
+<div class="container-fluid page">
+    <div class="row">
+        <div class="col-12 col-md-6 page mobile-img" 
+        style="background-image: url('../../../assets/img/carlogin.jpg'); background-size: cover; background-position: -20rem 0;"></div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+            <div class="d-flex flex-column my-auto p-5">
+                <h3 class="mb-3 alata-regular" style="font-size: 3rem;">Witaj w strefie <span style="color: #F05737;">klienta</span></h3>
+                <p class="inriasans-light mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aenean eu facilisis enim. Morbi nisl ex, dictum eu pellentesque in, feugiat et nibh. Praesent egestas fringilla dolor sed rhoncus. Vestibulum ac viverra quam. </p>
+                    <hr class="divider">
+                    <form (ngSubmit)="onSubmit()" ngNativeValidate>
+                        <div class="form-group my-2">
+                            <label for="username">Username</label>
+                            <input type="text" [(ngModel)]="user.username" name="username" class="form-control" required/>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="password">Password</label>
+                            <input type="password" [(ngModel)]="user.password" name="password" class="form-control" required/>
+                        </div>
+                        <button type="submit" [disabled]="loading" class="btn btn-primary my-3">Zaloguj</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

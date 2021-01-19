@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Alata-Regular';
+    src: url('../../../../assets/fonts/Alata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InriaSans-Light';
+    src: url('../../../../assets/fonts/InriaSans-Light.ttf');
+}
+
+.alata-regular {
+    font-family: 'Alata-Regular';
+}
+
+.inriasans-light {
+    font-family: 'InriaSans-Light';
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }

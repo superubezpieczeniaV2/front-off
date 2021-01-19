@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-header">
+      Miejsca parkingowe
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nazwa</th>
+            <th scope="col">Cena</th>
+            <th scope="col">Akcja</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let methodUse of methodUse$ | async">
+                <th scope="row" class="py-3 alata-regular">{{ methodUse.idMethodUse }}</th>
+                <td class="py-3 inriasans-light">{{ methodUse.method }}</td>
+                <td class="py-3 inriasans-light">{{ methodUse.value }}</td>
+                <td class="py-3"><button type="button" class="btn btn-dark alata-regular" (click)="onDelete(methodUse.idMethodUse)">Usuń</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>

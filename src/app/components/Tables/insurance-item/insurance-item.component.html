@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    Typy ubezpieczeń
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Rodzaj</th>
+          <th scope="col">Cena</th>
+          <th scope="col">Akcja</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let typeInsurance of typeInsurances$ | async">
+              <th scope="row" class="py-3 alata-regular">{{ typeInsurance.idTypeInsurance }}</th>
+              <td class="py-3 inriasans-light">{{ typeInsurance.type }}</td>
+              <td class="py-3 inriasans-light">{{ typeInsurance.price }}</td>
+              <td class="py-3"><button type="button" class="btn btn-dark alata-regular" (click)="onDelete(typeInsurance.idTypeInsurance)">Usuń</button></td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+</div>

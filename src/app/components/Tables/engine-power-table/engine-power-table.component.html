@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+      Marki samochodowe
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Moc</th>
+            <th scope="col">Pojemność</th>
+            <th scope="col">Cena</th>
+            <th scope="col">Akcja</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let enginePower of enginePowers$ | async">
+                <th scope="row" class="py-3 alata-regular">{{ enginePower.idEnginePower }}</th>
+                <td class="py-3 inriasans-light">{{ enginePower.power }}</td>
+                <td class="py-3 inriasans-light">{{ enginePower.capacity }}</td>
+                <td class="py-3 inriasans-light">{{ enginePower.value }}</td>
+                <td class="py-3"><button type="button" class="btn btn-dark alata-regular" (click)="onDelete(enginePower.idEnginePower)">Usuń</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>

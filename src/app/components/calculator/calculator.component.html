@@ -1,0 +1,63 @@
+<div class="container-fluid py-5" style="background-color: #F05737">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="alata-regular text-light">
+                            Oblicz swoją polisę!
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Model samochodu</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option *ngFor="let model of models$ | async">{{ model.name }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Marka samochodu...</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let mark of marks$ | async">{{ mark.name }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Wybierz moc silnika</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let enginePower of enginePowers$ | async">{{ enginePower.power }} / {{enginePower.capacity}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Wykorzystanie</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let methodsUse of methodsUse$ | async">{{ methodsUse.method }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Miejsce parkingowe</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let parkingPlace of parkingPlaces$ | async">{{ parkingPlace.place }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Typ ubezpieczenia, które Cię interesuje</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let typesInsurance of typesInsurance$ | async">{{ typesInsurance.type }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="alata-regular text-light mb-2">Rodzaj właściciela</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let typesOwner of typesOwner$ | async">{{ typesOwner.type }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

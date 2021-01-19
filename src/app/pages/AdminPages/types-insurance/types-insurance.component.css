@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Alata-Regular';
+    src: url('../../../../assets/fonts/Alata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InriaSans-Light';
+    src: url('../../../../assets/fonts/InriaSans-Light.ttf');
+}
+
+.alata-regular {
+    font-family: 'Alata-Regular';
+}
+
+.inriasans-light {
+    font-family: 'InriaSans-Light';
+}
+
+.page {
+    min-height: 100vh;
+    overflow-x: hidden;
+}

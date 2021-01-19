@@ -1,0 +1,13 @@
+<form  ngNativeValidate>
+    <div class="form-group my-2">
+        <label for="username">Nazwa</label>
+        <input type="text" name="Type" [(ngModel)]="model.Type" name="Type" class="form-control" required/>
+    </div>
+    TODO: remove this: {{model.Type}}
+    <div class="form-group my-2">
+        <label for="password">Cena</label>
+        <input type="text" name="Price" [(ngModel)]="model.Price" name="Price" class="form-control" required/>
+    </div>
+    <button type="submit" class="btn btn-primary my-3" (click)="onSubmit()">Wyślij</button>
+</form>
+{{diagnostic}}
